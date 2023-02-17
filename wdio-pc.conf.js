@@ -2,10 +2,10 @@ const cucumberJson = require('wdio-cucumberjs-json-reporter').default;
 const { generate } = require('multiple-cucumber-html-reporter');
 const { removeSync } = require('fs-extra');
 var tools = require("./scripts/tools");
-var credential = require("./pwd");
+// var credential = require("./pwd");
 var teststarttime = '';
-LT_USERNAME = process.env.LT_USERNAME || credential.LamdatestCredential.USERNAME;
-LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || credential.LamdatestCredential.PWD;
+LT_USERNAME = process.env.LT_USERNAME // || credential.LamdatestCredential.USERNAME;
+LT_ACCESS_KEY = process.env.LT_ACCESS_KEY // || credential.LamdatestCredential.PWD;
 exports.config = {
     //
     // ====================
@@ -188,7 +188,10 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', 'cucumberjs-json'],
+    reporters: ['spec', 'cucumberjs-json',
+    ['junit', {
+        outputDir: './'
+    }]],
 
 
     //

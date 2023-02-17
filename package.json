@@ -8,7 +8,7 @@
         "@wdio/local-runner": "^7.16.13",
         "@wdio/spec-reporter": "^7.16.13",
         "chai": "^4.3.6",
-        "chromedriver": "^109.0.0",
+        "chromedriver": "^106.0.0",
         "cross-env": "^7.0.3",
         "cucumber-html-reporter": "^5.5.0",
         "multiple-cucumber-html-reporter": "^1.18.3",

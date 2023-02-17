@@ -5,7 +5,7 @@ When(/^I click the baidu logo$/, async () => {
 });
 
 Then(/^I should navigate to baidu home page$/, async () => {
-    
+    await expect(browser).toHaveUrl('https://webdriver.io')
 });
 
 Given(/^I open baidu homepage$/, async () => {
